@@ -18,6 +18,7 @@
 
   <modules>
     <module>saas_parent</module>
+    <module>saas_annotation</module>
   </modules>
 
 
