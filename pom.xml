@@ -19,6 +19,7 @@
   <modules>
     <module>saas_parent</module>
     <module>saas_annotation</module>
+    <module>saas_core</module>
   </modules>
 
 
@@ -28,6 +29,11 @@
 
   <dependencyManagement>
     <dependencies>
+      <dependency>
+        <groupId>com.saas</groupId>
+        <artifactId>saas_annotation</artifactId>
+        <version>${project.version}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
   <dependencies>
