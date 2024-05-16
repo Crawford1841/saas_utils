@@ -7,6 +7,8 @@ import com.baomidou.mybatisplus.core.metadata.OrderItem;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.saas.basic.base.entity.SuperEntity;
+import com.saas.basic.utils.StrPool;
+import com.saas.database.mybatis.conditions.Wraps;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;

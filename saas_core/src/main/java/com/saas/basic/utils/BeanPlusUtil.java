@@ -1,7 +1,6 @@
 package com.saas.basic.utils;
 
-import static cn.hutool.core.bean.BeanUtil.toBean;
-
+import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.collection.CollUtil;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -9,7 +8,6 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
-import org.springframework.beans.BeanUtils;
 /**
  * Bean增强类工具类
  *
@@ -18,7 +16,7 @@ import org.springframework.beans.BeanUtils;
  * </p>
  *
  */
-public class BeanPlusUtil extends BeanUtils {
+public class BeanPlusUtil extends BeanUtil {
     /**
      * 转换 list
      *
