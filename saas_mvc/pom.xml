@@ -19,7 +19,10 @@
       <groupId>com.saas</groupId>
       <artifactId>saas_core</artifactId>
     </dependency>
-
+    <dependency>
+      <groupId>com.saas</groupId>
+      <artifactId>saas_database</artifactId>
+    </dependency>
   </dependencies>
 
 </project>
