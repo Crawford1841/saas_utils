@@ -22,6 +22,7 @@
     <module>saas_core</module>
     <module>saas_mvc</module>
     <module>saas_database</module>
+    <module>saas_cache_starter</module>
   </modules>
 
 
@@ -44,6 +45,11 @@
       <dependency>
         <groupId>com.saas</groupId>
         <artifactId>saas_database</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.saas</groupId>
+        <artifactId>saas_cache_starter</artifactId>
         <version>${project.version}</version>
       </dependency>
     </dependencies>

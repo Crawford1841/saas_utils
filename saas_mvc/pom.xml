@@ -23,6 +23,10 @@
       <groupId>com.saas</groupId>
       <artifactId>saas_database</artifactId>
     </dependency>
+    <dependency>
+      <groupId>com.saas</groupId>
+      <artifactId>saas_cache_starter</artifactId>
+    </dependency>
   </dependencies>
 
 </project>
