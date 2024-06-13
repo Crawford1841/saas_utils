@@ -23,6 +23,7 @@
     <module>saas_mvc</module>
     <module>saas_database</module>
     <module>saas_cache_starter</module>
+    <module>lamp_boot</module>
   </modules>
 
 

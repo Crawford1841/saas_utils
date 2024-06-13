@@ -17,15 +17,19 @@ import java.util.concurrent.ConcurrentHashMap;
  *
  */
 public class ContextUtil {
-    private ContextUtil() {
-    }
-
     /**
      * 支持多线程传递参数
      *
+     * @author tangyh
+     * @date 2021/6/23 9:26 下午
+     * @create [2021/6/23 9:26 下午 ] [tangyh] [初始创建]
      */
     private static final ThreadLocal<Map<String, String>> THREAD_LOCAL = new ThreadLocal<>();
-    //private static final ThreadLocal<Map<String, String>> THREAD_LOCAL = new TransmittableThreadLocal<>();  // 配合 @Async 使用时会有问题
+//    private static final ThreadLocal<Map<String, String>> THREAD_LOCAL = new TransmittableThreadLocal<>();  // 配合 @Async 使用时会有问题
+
+    private ContextUtil() {
+    }
+
     public static void putAll(Map<String, String> map) {
         map.forEach(ContextUtil::set);
     }
@@ -79,6 +83,15 @@ public class ContextUtil {
      */
     public static Long getUserId() {
         return get(ContextConstants.USER_ID_HEADER, Long.class);
+    }
+
+    /**
+     * 用户ID
+     *
+     * @param userId 用户ID
+     */
+    public static void setUserId(Object userId) {
+        set(ContextConstants.USER_ID_HEADER, userId);
     }
 
     /**
@@ -173,6 +186,7 @@ public class ContextUtil {
         set(ContextConstants.TENANT_EXTEND_POOL_NAME_HEADER, tenantId);
     }
 
+
     /**
      * 设置默认库
      */
@@ -242,7 +256,6 @@ public class ContextUtil {
     public static void setToken(String token) {
         set(ContextConstants.TOKEN_HEADER, token == null ? StrPool.EMPTY : token);
     }
-
 
     /**
      * 获取 当前所属的公司ID
